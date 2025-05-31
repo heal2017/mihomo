@@ -1,4 +1,5 @@
 # mihomo service
+automatic scripts to install mihomo service on windows or linux
 
 ## Mihomo
 the service is based on [mihomo](https://github.com/MetaCubeX/mihomo)
