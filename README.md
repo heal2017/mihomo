@@ -17,7 +17,7 @@ use [winsw](https://github.com/winsw/winsw) to install mihomo service in windows
 
 ### Windows
 
-install mihomo service [download zip](https://github.com/heal2017/mihomo/releases/download/v1.0.0/mihomo-windows-amd64-v1.0.0.zip)
+install mihomo service [download zip](https://github.com/heal2017/mihomo/releases/download/latest/mihomo-windows-amd64.zip)
 
 ```shell
 .\install.bat
@@ -30,9 +30,13 @@ uninstall mihomo service
 
 ### Linux
 
-install mihomo service [download zip](https://github.com/heal2017/mihomo/releases/download/v1.0.0/mihomo-linux-amd64-v1.0.0.zip)
+install mihomo service [download zip](https://github.com/heal2017/mihomo/releases/download/latest/mihomo-linux-amd64.zip)
 
 ```shell
 ./install.sh
 ```
+
+## Configure
+
+- [template.yaml](https://github.com/heal2017/mihomo/mihomo/template.yaml)
 
