@@ -38,5 +38,5 @@ install mihomo service [download zip](https://github.com/heal2017/mihomo/release
 
 ## Configure
 
-- [template.yaml](https://github.com/heal2017/mihomo/mihomo/template.yaml)
+- [mihomo/template.yaml](https://github.com/heal2017/mihomo/mihomo/template.yaml)
 
