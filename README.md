@@ -38,5 +38,5 @@ install mihomo service [download zip](https://github.com/heal2017/mihomo/release
 
 ## Configure
 
-- [mihomo/config.yaml](https://github.com/heal2017/mihomo/mihomo/config.yaml)
+- [mihomo/config.yaml](https://github.com/heal2017/mihomo/blob/main/mihomo/config.yaml)
 
