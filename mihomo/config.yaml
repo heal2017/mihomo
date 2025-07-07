@@ -1,33 +1,16 @@
-mixed-port: 7890
-allow-lan: true
-bind-address: '*'
-lan-allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
 mode: rule
-log-level: debug
-ipv6: true
+log-level: info
 
 external-controller: 0.0.0.0:9090
-external-ui: "./ui"
-
-external-controller-cors:
-  allow-private-network: true
-  allow-origins:
-  - '*'
+external-ui: ui
 
 tun:
   enable: true
   stack: gvisor
   device: Mihomo
-  auto-route: true
-  strict-route: false
-  auto-detect-interface: true
   dns-hijack:
     - any:53
-  mtu: 1500
 
-# DNS
 dns:
   enable: true
   listen: :53
@@ -49,26 +32,23 @@ profile:
 
 proxies:
   - name: "PROXY"
-    type: ssh
-    server: 113.44.14.120
-    port: 22
-    username: root
+    type: ss
+    server: 120.198.71.191
+    port: 29467
+    cipher: chacha20-ietf-poly1305
     password: password
+    udp: true
 
 rules:
-  - DOMAIN-SUFFIX,jianguoyun.com,GLOBAL
-  - DOMAIN-SUFFIX,github.com,GLOBAL
-  - DOMAIN-SUFFIX,deepseek.com,GLOBAL
-  - DOMAIN-KEYWORD,csdn,GLOBAL
+  - DOMAIN-SUFFIX,jianguoyun.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-SUFFIX,deepseek.com,PROXY
+  - DOMAIN-KEYWORD,csdn,PROXY
   # LAN
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
-  # DNS
-  - IP-CIDR,223.5.5.5/32,GLOBAL,no-resolve
-  - IP-CIDR,119.29.29.29/32,GLOBAL,no-resolve
-  - IP-CIDR,8.8.8.8/32,GLOBAL,no-resolve
   # Final
   - MATCH,DIRECT
 
